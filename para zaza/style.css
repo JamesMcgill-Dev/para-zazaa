@@ -1,0 +1,186 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 90%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff6b6b;
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+main p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro-message {
+    color: #555;
+}
+
+.main-message {
+    color: #444;
+    font-weight: 400;
+}
+
+.confession {
+    font-size: 1.3em;
+    color: #e74c3c;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.cute-button {
+    background-color: #ff9a8d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.cute-button:hover {
+    background-color: #ff7f70;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+    margin-top: 30px;
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.question {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.response-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.yes-button {
+    background-color: #82e0aa;
+}
+
+.yes-button:hover {
+    background-color: #58d68d;
+}
+
+.no-button {
+    background-color: #f1948a;
+}
+
+.no-button:hover {
+    background-color: #ec7063;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #777;
+}
+
+.signature {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    color: #ff6b6b;
+    margin-bottom: 5px;
+}
+
+.sender-name {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Hearts background */
+.heart {
+    position: absolute;
+    background-color: #ff6b6b;
+    transform: rotate(-45deg);
+    animation: floatHearts 10s infinite ease-in-out;
+    opacity: 0;
+}
+
+.heart:before, .heart:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -50%;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: 50%;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(0) rotate(-45deg); opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(-1000px) rotate(-45deg); opacity: 0; }
+}
+
+/* Generate multiple hearts with different sizes and positions */
